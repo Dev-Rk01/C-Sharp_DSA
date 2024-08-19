@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\devan\\source\\repos\\DSA\\DSA\\DSA.csproj": {}
+    "D:\\Git\\DSA\\DSA\\DSA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\devan\\source\\repos\\DSA\\DSA\\DSA.csproj": {
+    "D:\\Git\\DSA\\DSA\\DSA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\devan\\source\\repos\\DSA\\DSA\\DSA.csproj",
+        "projectUniqueName": "D:\\Git\\DSA\\DSA\\DSA.csproj",
         "projectName": "DSA",
-        "projectPath": "C:\\Users\\devan\\source\\repos\\DSA\\DSA\\DSA.csproj",
+        "projectPath": "D:\\Git\\DSA\\DSA\\DSA.csproj",
         "packagesPath": "C:\\Users\\devan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\devan\\source\\repos\\DSA\\DSA\\obj\\",
+        "outputPath": "D:\\Git\\DSA\\DSA\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\devan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
