@@ -71,7 +71,7 @@ namespace DSA
 			return n * facorialByRecursion(n - 1);
 		}
 
-		public static double countTrailingZeros(int n)
+		public static double countTrailingZerosInFactorial(int n)
 		{
 			
 			double fact = 1;
@@ -93,9 +93,54 @@ namespace DSA
 		}
 
 
-		public static int countTrailingZerosOptimezed(int n)
+		public static int countTrailingZerosInFactorialOptimized(int n)
 		{
+			int temp = 1;
+			int x = 1;
+			int count = 0;
+			while(temp>0)
+			{
+				temp = n / (int)Math.Pow(5, x);
+				x++;
+				count = count + temp;
+			}
+            return count;
+		}
+		public static int countTrailingZerosInFactorialOptimized_MethodTwo(int n)
+		{
+			int count = 0;
+			for(int i=5; i<=n; i=i*5)
+			{
+                count = count +  n / i;
+			}
+            return count;
+		}
 
+		public static int hcfOfTwoNumbers(int a, int b)
+		{
+			int res = Math.Min(a, b);
+			while (res > 0)
+			{
+				if (a % res == 0 && b % res == 0) break;
+				res--;
+			}
+			return res;
+		}
+		
+		public static int hcfOfTwoNumbersOptmized(int a, int b)
+		{
+			while(a!=b)
+			{
+				if (a > b) a = a - b;
+				else b = b - a;
+			}
+			return a;
+		}
+		
+		public static int hcfOfTwoNumbersFurtherOptmized(int a, int b)
+		{
+			if(b==0) return a;
+			return hcfOfTwoNumbersFurtherOptmized(b, a % b);
 		}
 	}
 
