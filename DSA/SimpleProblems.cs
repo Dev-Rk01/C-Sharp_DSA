@@ -142,6 +142,80 @@ namespace DSA
 			if(b==0) return a;
 			return hcfOfTwoNumbersFurtherOptmized(b, a % b);
 		}
+
+		public static int lcmOfTwoNumbers(int a, int b)
+		{
+			int max = Math.Max(a, b);
+			while (true)
+			{
+				if (max % a == 0 && max % b == 0) return max;
+				max++;
+			}
+		}
+		
+		public static int lcmOfTwoNumbersOptimized(int a, int b)
+		{
+			int HCF(int hcf_a, int hcf_b)
+			{
+				if (hcf_b == 0) return hcf_a;
+				return HCF(hcf_b, hcf_a % hcf_b);
+			}
+			int hcf = HCF(a, b);
+
+			return (a * b) / hcf;
+		}
+
+		public static bool isPrime(int n)
+		{
+			if (n == 0 || n == 1) return false;
+			for(int i=2; i<n; i++)
+			{
+				if (n % i == 0) return false;
+			}
+			return true;
+		}
+
+		public static bool isPrimeOptimized(int n)
+		{
+			if (n == 0 || n == 1) return false;
+			for(int i=2; i*i<n; i++)
+			{
+				if (n % i == 0) return false;
+			}
+			return true;
+		}
+
+		public static bool isPrimeFurtherOptimized(int n)
+		{
+			if (n == 0 || n == 1) return false;
+			if (n == 2 || n == 3) return true;
+			if (n % 2 == 0 || n % 3 == 0) return false;
+			for (int i = 5; i * i < n; i = i + 6)
+			{
+				if (n % i == 0 || n % (i + 2) == 0) return false;
+			}
+			return true;
+		}
+
+
+		public static string primeFactor(int n)
+		{
+			List<int> primeFactors = new List<int>();
+			for(int i=2; i*i<n; i++)
+			{
+				if(isPrimeFurtherOptimized(i))
+				{
+					int x = i;
+					while(n%x==0)
+					{
+						primeFactors.Add(i);
+						x = x * i;
+					}
+				}
+			}
+			return string.Join(", ", primeFactors);
+		}
+
 	}
 
 }

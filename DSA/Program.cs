@@ -11,3 +11,9 @@ Console.WriteLine($"Number of traling zeros in factorial(Optimized_Method-2) of 
 Console.WriteLine($"HCF of (100, 250) -> {SimpleProblems.hcfOfTwoNumbers(100,250)}\n");
 Console.WriteLine($"HCF of (100, 250) -> {SimpleProblems.hcfOfTwoNumbersOptmized(100,250)}\n");
 Console.WriteLine($"HCF of (100, 250) -> {SimpleProblems.hcfOfTwoNumbersFurtherOptmized(100,250)}\n");
+Console.WriteLine($"LCM of (100, 250) -> {SimpleProblems.lcmOfTwoNumbers(100,250)}\n");
+Console.WriteLine($"LCM of (100, 250) -> {SimpleProblems.lcmOfTwoNumbersOptimized(100,250)}\n");
+Console.WriteLine($"Given number is prime -> {SimpleProblems.isPrime(20)}\n");
+Console.WriteLine($"Given number is prime -> {SimpleProblems.isPrimeOptimized(20)}\n");
+Console.WriteLine($"Given number is prime -> {SimpleProblems.isPrimeFurtherOptimized(20)}\n");
+Console.WriteLine($"The prime factor of given number -> {SimpleProblems.primeFactor(20)}\n");
