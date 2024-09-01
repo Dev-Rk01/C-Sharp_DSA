@@ -1,4 +1,5 @@
 ﻿using DSA;
+using System.Text;
 
 Console.WriteLine($"Number of digits in 34 -> {SimpleProblems.countDigit(34)}\n");
 Console.WriteLine($"Is 212 is Palindrome -> {SimpleProblems.palindrome(212)}\n");
@@ -17,3 +18,13 @@ Console.WriteLine($"Given number is prime -> {SimpleProblems.isPrime(20)}\n");
 Console.WriteLine($"Given number is prime -> {SimpleProblems.isPrimeOptimized(20)}\n");
 Console.WriteLine($"Given number is prime -> {SimpleProblems.isPrimeFurtherOptimized(20)}\n");
 Console.WriteLine($"The prime factor of given number -> {SimpleProblems.primeFactor(20)}\n");
+
+//countChars function call
+Dictionary<char, int> dict = PracticeProblems.countChars("Hello i chro 12345 $# %(*&%&@");
+StringBuilder sb = new StringBuilder();
+foreach(KeyValuePair<char, int> item in dict)
+{
+	sb.Append($"{item.Key}:{item.Value}\n");
+	//Console.WriteLine($"{item.Key}:{item.Value}");
+};
+Console.WriteLine($"Count of each character in string -> \n{sb.ToString()}\n");
