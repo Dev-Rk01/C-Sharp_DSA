@@ -18,9 +18,11 @@ Console.WriteLine($"Given number is prime -> {SimpleProblems.isPrime(20)}\n");
 Console.WriteLine($"Given number is prime -> {SimpleProblems.isPrimeOptimized(20)}\n");
 Console.WriteLine($"Given number is prime -> {SimpleProblems.isPrimeFurtherOptimized(20)}\n");
 Console.WriteLine($"The prime factor of given number -> {SimpleProblems.primeFactor(20)}\n");
+Console.WriteLine($"The prime factor of given number -> {SimpleProblems.primeFactor(20)}\n");
+
 
 //countChars function call
-Dictionary<char, int> dict = PracticeProblems.countChars("Hello i chro 12345 $# %(*&%&@");
+Dictionary<char, int> dict = PracticeProblems.countChar("Hello i chro  1     2345 $# %(*&%&@");
 StringBuilder sb = new StringBuilder();
 foreach(KeyValuePair<char, int> item in dict)
 {
@@ -28,3 +30,6 @@ foreach(KeyValuePair<char, int> item in dict)
 	//Console.WriteLine($"{item.Key}:{item.Value}");
 };
 Console.WriteLine($"Count of each character in string -> \n{sb.ToString()}\n");
+
+
+Console.WriteLine($"Second array contains all the square of first array -> {PracticeProblems.isContainSquare([5,2,4], [4, 16, 25])}\n");
