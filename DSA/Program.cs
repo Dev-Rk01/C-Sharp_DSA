@@ -20,7 +20,6 @@ Console.WriteLine($"Given number is prime -> {SimpleProblems.isPrimeFurtherOptim
 Console.WriteLine($"The prime factor of given number -> {SimpleProblems.primeFactor(20)}\n");
 Console.WriteLine($"The prime factor of given number -> {SimpleProblems.primeFactor(20)}\n");
 
-
 //countChars function call
 Dictionary<char, int> dict = PracticeProblems.countChar("Hello i chro  1     2345 $# %(*&%&@");
 StringBuilder sb = new StringBuilder();
@@ -33,3 +32,17 @@ Console.WriteLine($"Count of each character in string -> \n{sb.ToString()}\n");
 
 
 Console.WriteLine($"Second array contains all the square of first array -> {PracticeProblems.isContainSquare([5,2,4], [4, 16, 25])}\n");
+Console.WriteLine($"Second array contains all the square of first array -> {PracticeProblems.isContainSquareOptimized([5,2,4], [4, 16, 25])}\n");
+Console.WriteLine($"Both strings are anagram of each other -> {PracticeProblems.IsAnagram("abcdeefsgh","abcadaefgh")}\n");
+
+int[] a = PracticeProblems.sumZero([-4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+StringBuilder sumZero = new StringBuilder();
+foreach(int item in a)
+{
+	sumZero.Append(item + ",");
+}
+Console.WriteLine($"Sum Zero -> {sumZero.ToString()}\n");
+
+
+int countNew = PracticeProblems.uniqueCount([0, 1, 2, 3, 4, 5, 5, 5, 6, 6, 7, 7, 7, 8, 8, 9, 9, 9]);
+Console.WriteLine($"Unique Count -> {countNew}\n");
