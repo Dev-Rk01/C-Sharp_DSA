@@ -46,3 +46,6 @@ Console.WriteLine($"Sum Zero -> {sumZero.ToString()}\n");
 
 int countNew = PracticeProblems.uniqueCount([0, 1, 2, 3, 4, 5, 5, 5, 6, 6, 7, 7, 7, 8, 8, 9, 9, 9]);
 Console.WriteLine($"Unique Count -> {countNew}\n");
+
+int maxSum = PracticeProblems.maxSum([1, 2, 5, 2, 8, 1, 5],4);
+Console.WriteLine($"Max Sum -> {maxSum}\n");

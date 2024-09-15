@@ -9,6 +9,8 @@ namespace DSA
 {
 	public static class PracticeProblems
 	{
+
+		//Frequency Counter Pattern
 		public static Dictionary<char, int> countChar(string str)
 		{
 			Dictionary<char, int> dic = new Dictionary<char, int>();
@@ -32,6 +34,8 @@ namespace DSA
 				   (c >= 'A' && c <= 'Z'); //uppercase (A-Z)
 		}
 
+
+		//Frequency Counter
 		public static bool isContainSquare(int[] a, int[] b)
 		{
 			bool flag = false;
@@ -59,6 +63,7 @@ namespace DSA
 			return true;
 		}
 
+		//Frequency Counter
 		public static bool IsAnagram(string s1, string s2)
 		{
 			s1 = s1.ToLower();
@@ -76,6 +81,8 @@ namespace DSA
 			return true;
 		}
 
+
+		//Two Pointer approach(start and end pointer)
 		public static int[] sumZero(int[] arr)
 		{
 			Array.Sort(arr);
@@ -92,6 +99,8 @@ namespace DSA
             return new int[] { };
 		}
 
+
+		//Multi pointer approach(more than one pointer)
 		public static int uniqueCount(int[] arr)
 		{
 			//[0, 1, 2, 3, 4, 5, 5, 5, 6, 6, 7, 7, 7, 8, 8, 9, 9, 9]
@@ -110,6 +119,66 @@ namespace DSA
 			}
 			return count;
 		}
+
+
+		//Multi Pointer approach(more than one pointer)
+		public static int LengthOfUniqueSubstring(string s)
+		{
+			//To store unique characters
+			var uniqueChracter = new HashSet<char>();
+
+			//Declare the pointer
+			int left = 0;
+			int maxLength = 0;
+
+			//Iterate through string s using right pointer
+			for (int right = 0; right < s.Length; right++)
+			{
+				//If character is not present in uniqueChracter
+				while(uniqueChracter.Contains(s[right]))
+				{
+					//Remove the character from uniqueChracter
+					uniqueChracter.Remove(s[left]);
+
+					//Move the left pointer
+					left++;
+				}
+
+				//Add the character to uniqueChracter
+				uniqueChracter.Add(s[right]);
+
+				//Update the maxLength
+				maxLength = Math.Max(maxLength, right - left + 1);
+			}
+
+			//Return the maxLength
+			return maxLength;
+		}
+
+
+
+		//Sliding window approach
+		public static int maxSum(int[] arr, int n)
+		{
+			
+			int maxSum = 0;
+			for(int i=0; i<n; i++)
+			{
+				maxSum += arr[i];
+			}
+			int currentSum = maxSum;
+
+			for(int i=n;i<arr.Length; i++)
+			{
+				currentSum = currentSum + arr[i] - arr[i - n];
+				maxSum = Math.Max(maxSum, currentSum);
+			}
+
+			return maxSum;
+		}
+
+
+
 	}
 }
 
