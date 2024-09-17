@@ -157,7 +157,7 @@ namespace DSA
 
 
 
-		//Sliding window approach
+		//Sliding window 
 		public static int maxSum(int[] arr, int n)
 		{
 			
@@ -177,6 +177,41 @@ namespace DSA
 			return maxSum;
 		}
 
+
+
+		//Divide and conqure
+		public static int Search(int[] array, int val)
+		{
+			int min = 0;
+			int max = array.Length - 1;
+
+			// Continue while the search range is valid
+			while (min <= max)
+			{
+				// Find the middle index
+				int middle = (min + max) / 2;
+				int currentElement = array[middle];
+
+				// If the middle element is less than the target, search the right half
+				if (currentElement < val)
+				{
+					min = middle + 1;
+				}
+				// If the middle element is greater than the target, search the left half
+				else if (currentElement > val)
+				{
+					max = middle - 1;
+				}
+				// If the target is found, return its index
+				else
+				{
+					return middle;
+				}
+			}
+
+			// If the value is not found, return -1
+			return -1;
+		}
 
 
 	}
