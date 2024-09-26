@@ -49,3 +49,6 @@ Console.WriteLine($"Unique Count -> {countNew}\n");
 
 int maxSum = PracticeProblems.maxSum([1, 2, 5, 2, 8, 1, 5],4);
 Console.WriteLine($"Max Sum -> {maxSum}\n");
+
+
+Console.WriteLine($"The given numeber freq matches or not -> {CodingChallanges.sameFreq(12345,54324)}\n");
